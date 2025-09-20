@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Your Name</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-3">
+            <h1 class="text-2xl font-bold text-blue-600">MyPortfolio</h1>
+            <ul class="flex gap-6">
+                <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
+        id="home">
+        <!-- Later made long name when in full view -->
+        <h2 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Hi, I’m <span class="text-yellow-300">M. Gia M.</span></h2> 
+        <p class="text-lg md:text-xl mb-6" data-aos="fade-up" data-aos-delay="200">Backend Developer | Designer |
+            Creator</p>
+        <a href="#projects"
+            class="px-6 py-3 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-500 transition"
+            data-aos="fade-up" data-aos-delay="400">See My Work</a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 max-w-6xl mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">About Me</h3>
+        <div class="md:flex gap-10 items-center">
+            <img src="resource/img/my-photo.jpg" alt="profile" class="rounded-2xl shadow-lg mb-6 md:mb-0 mx-auto" style="width: auto;max-width: 300px; max-height: 300px;" 
+                data-aos="fade-right">
+            <div data-aos="fade-left">
+                <p class="text-lg leading-relaxed">I am a passionate frontend developer who loves building clean,
+                    aesthetic, and responsive websites. Skilled in HTML, CSS, JavaScript, and modern frameworks. Always
+                    eager to learn and explore new technologies.</p>
+                <div class="mt-6 flex gap-4">
+                    <i class="fab fa-html5 text-3xl text-orange-500"></i>
+                    <i class="fab fa-css3-alt text-3xl text-blue-500"></i>
+                    <i class="fab fa-js text-3xl text-yellow-500"></i>
+                    <i class="fab fa-react text-3xl text-cyan-500"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Projects</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in">
+                    <img src="resource/img/project/myvote.png" alt="MyVote" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">MyVote</h4>
+                        <p class="text-sm text-gray-600 mb-3">A website build with laravel for make a voting easier
+                        </p>
+                        <a href="https://github.com/Krigergeist/MyVote/" class="text-blue-600 font-semibold hover:underline">View More</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="resource/img/project/Pomodoro.png" alt="Pomodoro Timer App" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Pomodoro Timer App</h4>
+                        <p class="text-sm text-gray-600 mb-3">A productivity tool built with JavaScript and Bootstrap.</p>
+                        <a href="https://github.com/Krigergeist/Podoromo_Timer_App" class="text-blue-600 font-semibold hover:underline">View More</a>
+                        or
+                        <a href="https://krigergeist.github.io/Podoromo_Timer_App/" class="text-blue-600 font-semibold hover:underline">Visit Site</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="resource/img/project/Task-Sceduler.png" alt="project3" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Task Scheduler</h4>
+                        <p class="text-sm text-gray-600 mb-3">Interactive task scheduling application that organizes your tasks efficiently.</p>
+                        <a href="https://github.com/Krigergeist/Task-Scheduler" class="text-blue-600 font-semibold hover:underline">View More</a>
+                        or
+                        <a href="https://krigergeist.github.io/Task-Scheduler/" class="text-blue-600 font-semibold hover:underline">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 max-w-6xl mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Contact Me</h3>
+        <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+            <input type="text" placeholder="Your Name"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="email" placeholder="Your Email"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <textarea placeholder="Your Message" rows="5"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            <button
+                class="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition">Send
+                Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 text-center py-6">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+
+</html>
