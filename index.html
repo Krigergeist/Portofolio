@@ -4,10 +4,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Your Name</title>
+    <title>Portfolio | M. Gia M. - Laravel & Bootstrap Developer</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Portfolio of M. Gia M. - Backend Developer, Laravel & Bootstrap enthusiast. Explore my projects, skills, and certificates." />
+    <meta name="keywords"
+        content="Portfolio, Laravel Developer, Bootstrap, Web Developer, Backend, Frontend, JavaScript, PHP" />
+    <meta property="og:title" content="Portfolio - M. Gia M." />
+    <meta property="og:description" content="Explore my works as a Laravel & Bootstrap Developer." />
+    <meta property="og:type" content="website" />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,6 +34,17 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+
+        /* Border & hover untuk card */
+        .card-custom {
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 
@@ -31,25 +54,46 @@
     <nav class="fixed w-full bg-white shadow-md z-50">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-3">
             <h1 class="text-2xl font-bold text-blue-600">MyPortfolio</h1>
-            <ul class="flex gap-6">
-                <li><a href="#about" class="hover:text-blue-600">About</a></li>
-                <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-                <li><a href="https://github.com/Krigergeist/" class="hover:text-blue-600">GitHub</a></li>
-                <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-                <li><a href="#Certificate" class="hover:text-blue-600">Certificate</a></li>
-                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+    
+            <!-- Hamburger -->
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+    
+            <!-- Menu -->
+            <ul id="menu"
+                class="hidden md:flex gap-6 flex-col md:flex-row absolute md:static bg-white left-0 w-full md:w-auto top-14 md:top-auto shadow-md md:shadow-none p-5 md:p-0">
+                <li><a href="#about" class="hover:text-blue-600 block py-2">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-600 block py-2">Skills</a></li>
+                <li><a href="https://github.com/Krigergeist/" class="hover:text-blue-600 block py-2">GitHub</a></li>
+                <li><a href="#projects" class="hover:text-blue-600 block py-2">Projects</a></li>
+                <li><a href="#Certificate" class="hover:text-blue-600 block py-2">Certificate</a></li>
+                <li><a href="#contact" class="hover:text-blue-600 block py-2">Contact</a></li>
             </ul>
         </div>
     </nav>
+    
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const menu = document.getElementById("menu");
 
-    <!-- Hero Section -->
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- Hero -->
     <section
         class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
         id="home">
-        <!-- Later made long name when in full view -->
-        <h2 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Hi, I’m <span class="text-yellow-300">M. Gia M.</span></h2> 
-        <p class="text-lg md:text-xl mb-6" data-aos="fade-up" data-aos-delay="200">Backend Developer | Designer |
-            Creator</p>
+        <h2 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Hi, I’m <span class="text-yellow-300">M. Gia
+                M.</span></h2>
+        <p class="text-base md:text-lg lg:text-xl mb-6" data-aos="fade-up" data-aos-delay="200">
+            Backend Developer | Laravel & Bootstrap Enthusiast | Creator
+        </p>
         <a href="#projects"
             class="px-6 py-3 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-500 transition"
             data-aos="fade-up" data-aos-delay="400">See My Work</a>
@@ -59,156 +103,197 @@
     <section id="about" class="py-20 max-w-6xl mx-auto px-4">
         <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">About Me</h3>
         <div class="md:flex gap-10 items-center">
-            <img src="resource/img/my-photo.jpg" alt="profile" class="rounded-2xl shadow-lg mb-6 md:mb-0 mx-auto" style="width: auto;max-width: 300px; max-height: 300px;" 
-                data-aos="fade-right">
+            <img src="resource/img/my-photo.jpg" alt="profile"
+                class="rounded-2xl shadow-lg mb-6 md:mb-0 mx-auto card-custom"
+                style="max-width: 300px; max-height: 300px;" loading="lazy" data-aos="fade-right">
             <div data-aos="fade-left">
-                <p class="text-lg leading-relaxed">I am a passionate frontend developer who loves building clean,
-                    aesthetic, and responsive websites. Skilled in HTML, CSS, JavaScript, and modern frameworks. Always
-                    eager to learn and explore new technologies.</p>
+                <p class="text-base md:text-lg lg:text-xl leading-relaxed">
+                    I am a passionate <b>Backend Developer</b> specialized in <b>Laravel</b> and modern frameworks like
+                    <b>Bootstrap</b>. I love building clean, responsive, and high-performance applications. My goal is
+                    to deliver
+                    scalable solutions with elegant design.
+                </p>
                 <div class="mt-6 flex gap-4">
+                    <i class="fab fa-laravel text-3xl text-red-600"></i>
+                    <i class="fab fa-bootstrap text-3xl text-purple-600"></i>
                     <i class="fab fa-html5 text-3xl text-orange-500"></i>
                     <i class="fab fa-css3-alt text-3xl text-blue-500"></i>
                     <i class="fab fa-js text-3xl text-yellow-500"></i>
-                    <i class="fab fa-react text-3xl text-cyan-500"></i>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Skills -->
     <section id="skills" class="py-20 bg-gray-100">
         <div class="max-w-6xl mx-auto px-4">
             <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Skills</h3>
             <div class="grid md:grid-cols-4 gap-8">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center" data-aos="zoom-in">
+                <div class="bg-white rounded-xl p-6 text-center card-custom" data-aos="zoom-in">
                     <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
                     <h4 class="font-bold text-lg mb-2">HTML5</h4>
-                    <img src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-html-5-icon.png" alt="MyVote" class="w-full pb-4 items-center" >
-                    <p class="text-sm text-gray-600">Proficient in creating semantic and accessible web structures.</p>
+                    <p class="text-sm text-gray-600">Semantic and accessible web structures.</p>
                 </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="bg-white rounded-xl p-6 text-center card-custom" data-aos="zoom-in" data-aos-delay="200">
                     <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4"></i>
                     <h4 class="font-bold text-lg mb-2">CSS3</h4>
-                    <img src="https://img-resize-cdn.joshmartin.ch/2000x0%2C363e360e8516e42e965658dab267b06b94b2899a751b80079cfce35583aa080c/https://joshmartin.ch/app/uploads/2017/10/css3.svg" alt="MyVote"class="w-full pb-4">
-                    <p class="text-sm text-gray-600">Skilled in styling and layout techniques for responsive designs.</p>
-                </div> 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <p class="text-sm text-gray-600">Responsive design & modern layouts.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center card-custom" data-aos="zoom-in" data-aos-delay="400">
                     <i class="fab fa-js text-5xl text-yellow-500 mb-4"></i>
                     <h4 class="font-bold text-lg mb-2">JavaScript</h4>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="MyVote" class="w-full pb-4">
-                    <p class="text-sm text-gray-600">Experienced in building interactive web applications.</p>
+                    <p class="text-sm text-gray-600">Interactive web applications.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center" data-aos="zoom-in" data-aos-delay="600">
-                    <i class="fab fa-react text-5xl text-cyan-500 mb-4"></i>
-                    <h4 class="font-bold text-lg mb-2">Php</h4>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="MyVote" class="w-full pb-4">
-                    <p class="text-sm text-gray-600">Skilled At creating dynamic web applications with PHP and Laravel.</p>
+                <div class="bg-white rounded-xl p-6 text-center card-custom" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="fab fa-php text-5xl text-indigo-500 mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">PHP & Laravel</h4>
+                    <p class="text-sm text-gray-600">Dynamic web apps with Laravel framework.</p>
+                </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Projects -->
-    <section id="projects" class="py-20 ">
+    <section id="projects" class="py-20">
         <div class="max-w-6xl mx-auto px-4">
             <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Projects</h3>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in">
+    
+                <!-- Project 1: MyVote -->
+                <div class="bg-white rounded-xl overflow-hidden card-custom" data-aos="zoom-in">
                     <a href="https://github.com/Krigergeist/MyVote/">
-                        <img src="resource/img/project/myvote.png" alt="MyVote" class="w-full">
+                        <img src="resource/img/project/myvote.png" alt="MyVote" class="w-full" loading="lazy">
                     </a>
-                        <div class="p-4">
+                    <div class="p-4">
                         <h4 class="font-bold text-lg mb-2">MyVote</h4>
-                        <p class="text-sm text-gray-600 mb-3">A website build with laravel for make a voting easier
+                        <p class="text-sm text-gray-600 mb-3">
+                            A voting platform built with <b>Laravel</b> for easy online elections.
                         </p>
-                        <a href="https://github.com/Krigergeist/MyVote/" class="text-blue-600 font-semibold hover:underline">View More</a>
+                        <a href="https://github.com/Krigergeist/MyVote/"
+                            class="text-blue-600 font-semibold hover:underline">View Repo</a>
                     </div>
                 </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+    
+                <!-- Project 2: Pomodoro Timer App -->
+                <div class="bg-white rounded-xl overflow-hidden card-custom" data-aos="zoom-in" data-aos-delay="200">
                     <a href="https://github.com/Krigergeist/Podoromo_Timer_App">
-                        <img src="resource/img/project/Pomodoro.png" alt="Pomodoro Timer App" class="w-full">
+                        <img src="resource/img/project/Pomodoro.png" alt="Pomodoro Timer App" class="w-full" loading="lazy">
                     </a>
                     <div class="p-4">
                         <h4 class="font-bold text-lg mb-2">Pomodoro Timer App</h4>
-                        <p class="text-sm text-gray-600 mb-3">A productivity tool built with JavaScript and Bootstrap.</p>
-                        <a href="https://github.com/Krigergeist/Podoromo_Timer_App" class="text-blue-600 font-semibold hover:underline">View More</a>
-                        or
-                        <a href="https://krigergeist.github.io/Podoromo_Timer_App/" class="text-blue-600 font-semibold hover:underline">Visit Site</a>
+                        <p class="text-sm text-gray-600 mb-3">
+                            A productivity tool built with <b>JavaScript</b> and <b>Bootstrap</b>.
+                        </p>
+                        <a href="https://github.com/Krigergeist/Podoromo_Timer_App"
+                            class="text-blue-600 font-semibold hover:underline">View Repo</a>
+                        <span class="mx-2">|</span>
+                        <a href="https://krigergeist.github.io/Podoromo_Timer_App/"
+                            class="text-blue-600 font-semibold hover:underline">Live Demo</a>
                     </div>
                 </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+    
+                <!-- Project 3: Task Scheduler -->
+                <div class="bg-white rounded-xl overflow-hidden card-custom" data-aos="zoom-in" data-aos-delay="400">
                     <a href="https://github.com/Krigergeist/Task-Scheduler">
-                        <img src="resource/img/project/Task-Sceduler.png" alt="project3" class="w-full">
+                        <img src="resource/img/project/Task-Sceduler.png" alt="Task Scheduler" class="w-full"
+                            loading="lazy">
                     </a>
                     <div class="p-4">
                         <h4 class="font-bold text-lg mb-2">Task Scheduler</h4>
-                        <p class="text-sm text-gray-600 mb-3">Interactive task scheduling application that organizes your tasks efficiently.</p>
-                        <a href="https://github.com/Krigergeist/Task-Scheduler" class="text-blue-600 font-semibold hover:underline">View More</a>
-                        or
-                        <a href="https://krigergeist.github.io/Task-Scheduler/" class="text-blue-600 font-semibold hover:underline">Visit Site</a>
+                        <p class="text-sm text-gray-600 mb-3">
+                            An interactive <b>JavaScript</b>-based task scheduling app for better productivity.
+                        </p>
+                        <a href="https://github.com/Krigergeist/Task-Scheduler"
+                            class="text-blue-600 font-semibold hover:underline">View Repo</a>
+                        <span class="mx-2">|</span>
+                        <a href="https://krigergeist.github.io/Task-Scheduler/"
+                            class="text-blue-600 font-semibold hover:underline">Live Demo</a>
                     </div>
                 </div>
-
-                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="resource/img/project/Portofolio.png" alt="project3" class="w-full">
+    
+                <!-- Project 4: Portfolio Website -->
+                <div class="bg-white rounded-xl overflow-hidden card-custom" data-aos="zoom-in" data-aos-delay="600">
+                    <a href="https://github.com/Krigergeist/Portofolio">
+                        <img src="resource/img/project/Portofolio.png" alt="Portfolio Website" class="w-full"
+                            loading="lazy">
+                    </a>
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Web Portofolio</h4>
-                        <p class="text-sm text-gray-600 mb-3">A web that showcase of my work and projects.</p>
-                        <a href="https://github.com/Krigergeist/Portofolio" class="text-blue-600 font-semibold hover:underline">View
-                            More</a>
-                        or
+                        <h4 class="font-bold text-lg mb-2">Portfolio Website</h4>
+                        <p class="text-sm text-gray-600 mb-3">
+                            A clean responsive portfolio built with <b>Tailwind</b> & <b>Bootstrap</b>.
+                        </p>
+                        <a href="https://github.com/Krigergeist/Portofolio"
+                            class="text-blue-600 font-semibold hover:underline">View Repo</a>
+                        <span class="mx-2">|</span>
                         <a href="https://krigergeist.github.io/Portofolio/"
-                            class="text-blue-600 font-semibold hover:underline">Visit Site</a>
+                            class="text-blue-600 font-semibold hover:underline">Live Demo</a>
                     </div>
                 </div>
-                
+    
             </div>
         </div>
     </section>
-         
-    <section id="Certificate" class="py-20 bg-gray-100"> 
+
+    <!-- Certificates -->
+    <section id="certificates" class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4">
-            <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Certificate</h3>
+            <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Certificates</h3>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in">
-                    <img src="resource/img/project/myvote.png" alt="MyVote" class="w-full">
+    
+                <!-- Certificate 1 -->
+                <div class="bg-white rounded-xl overflow-hidden card-custom" data-aos="zoom-in">
+                    <a href="resource/certificates/certificate1.pdf" target="_blank">
+                        <img src="resource/img/certificates/certificate1.png" alt="Certificate 1" class="w-full"
+                            loading="lazy">
+                    </a>
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">MyVote</h4>
-                        <p class="text-sm text-gray-600 mb-3">A website build with laravel for make a voting easier
+                        <h4 class="font-bold text-lg mb-2">Frontend Development</h4>
+                        <p class="text-sm text-gray-600 mb-3">
+                            Issued by <b>Dicoding</b>, 2025
                         </p>
+                        <a href="resource/certificates/certificate1.pdf" target="_blank"
+                            class="text-blue-600 font-semibold hover:underline">
+                            View Certificate
+                        </a>
                     </div>
                 </div>
-        
-                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="resource/img/project/Pomodoro.png" alt="Pomodoro Timer App" class="w-full">
+    
+                <!-- Certificate 2 -->
+                <div class="bg-white rounded-xl overflow-hidden card-custom" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="resource/certificates/certificate2.pdf" target="_blank">
+                        <img src="resource/img/certificates/certificate2.png" alt="Certificate 2" class="w-full"
+                            loading="lazy">
+                    </a>
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Pomodoro Timer App</h4>
-                        <p class="text-sm text-gray-600 mb-3">A productivity tool built with JavaScript and Bootstrap.</p>
-                        
+                        <h4 class="font-bold text-lg mb-2">JavaScript Essentials</h4>
+                        <p class="text-sm text-gray-600 mb-3">
+                            Issued by <b>SoloLearn</b>, 2024
+                        </p>
+                        <a href="resource/certificates/certificate2.pdf" target="_blank"
+                            class="text-blue-600 font-semibold hover:underline">
+                            View Certificate
+                        </a>
                     </div>
                 </div>
-        
-                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="resource/img/project/Task-Sceduler.png" alt="project3" class="w-full">
+    
+                <!-- Certificate 3 -->
+                <div class="bg-white rounded-xl overflow-hidden card-custom" data-aos="zoom-in" data-aos-delay="400">
+                    <a href="resource/certificates/certificate3.pdf" target="_blank">
+                        <img src="resource/img/certificates/certificate3.png" alt="Certificate 3" class="w-full"
+                            loading="lazy">
+                    </a>
                     <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Task Scheduler</h4>
-                        <p class="text-sm text-gray-600 mb-3">Interactive task scheduling application that organizes your tasks
-                            efficiently.</p>
-                        
+                        <h4 class="font-bold text-lg mb-2">UI/UX Design</h4>
+                        <p class="text-sm text-gray-600 mb-3">
+                            Issued by <b>Coursera</b>, 2025
+                        </p>
+                        <a href="resource/certificates/certificate3.pdf" target="_blank"
+                            class="text-blue-600 font-semibold hover:underline">
+                            View Certificate
+                        </a>
                     </div>
                 </div>
-        
-                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="resource/img/project/Task-Sceduler.png" alt="project3" class="w-full">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg mb-2">Web Portofolio</h4>
-                        <p class="text-sm text-gray-600 mb-3">A web that showcase of my work and projects.</p>
-                        
-                    </div>
-                </div>
-        
+    
             </div>
         </div>
     </section>
@@ -216,14 +301,18 @@
     <!-- Contact -->
     <section id="contact" class="py-20 max-w-6xl mx-auto px-4">
         <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Contact Me</h3>
-        <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
-            <input type="text" placeholder="Your Name"
-                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <input type="email" placeholder="Your Email"
-                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <textarea placeholder="Your Message" rows="5"
-                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-            <button
+        <form class="max-w-xl mx-auto bg-white p-8 rounded-xl card-custom" method="POST" action="/contact"
+            data-aos="fade-up">
+            <input type="text" name="name" placeholder="Your Name"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required>
+            <input type="email" name="email" placeholder="Your Email"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required>
+            <textarea name="message" placeholder="Your Message" rows="5"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required></textarea>
+            <button type="submit"
                 class="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition">Send
                 Message</button>
         </form>
@@ -231,16 +320,13 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-400 text-center py-6">
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 M. Gia M. | Built with Laravel & Bootstrap. All rights reserved.</p>
     </footer>
 
     <!-- AOS Script -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
 
