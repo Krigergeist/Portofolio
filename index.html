@@ -33,7 +33,10 @@
             <h1 class="text-2xl font-bold text-blue-600">MyPortfolio</h1>
             <ul class="flex gap-6">
                 <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+                <li><a href="https://github.com/Krigergeist/" class="hover:text-blue-600">GitHub</a></li>
                 <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+                <li><a href="#Certificate" class="hover:text-blue-600">Certificate</a></li>
                 <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
             </ul>
         </div>
@@ -71,15 +74,50 @@
             </div>
         </div>
     </section>
+    
+    <!-- Skills -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Skills</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center" data-aos="zoom-in">
+                    <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">HTML5</h4>
+                    <img src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-html-5-icon.png" alt="MyVote" class="w-full pb-4 items-center" >
+                    <p class="text-sm text-gray-600">Proficient in creating semantic and accessible web structures.</p>
+                </div>
 
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">CSS3</h4>
+                    <img src="https://img-resize-cdn.joshmartin.ch/2000x0%2C363e360e8516e42e965658dab267b06b94b2899a751b80079cfce35583aa080c/https://joshmartin.ch/app/uploads/2017/10/css3.svg" alt="MyVote"class="w-full pb-4">
+                    <p class="text-sm text-gray-600">Skilled in styling and layout techniques for responsive designs.</p>
+                </div> 
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fab fa-js text-5xl text-yellow-500 mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">JavaScript</h4>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="MyVote" class="w-full pb-4">
+                    <p class="text-sm text-gray-600">Experienced in building interactive web applications.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 text-center" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="fab fa-react text-5xl text-cyan-500 mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Php</h4>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="MyVote" class="w-full pb-4">
+                    <p class="text-sm text-gray-600">Skilled At creating dynamic web applications with PHP and Laravel.</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Projects -->
-    <section id="projects" class="py-20 bg-gray-100">
+    <section id="projects" class="py-20 ">
         <div class="max-w-6xl mx-auto px-4">
             <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Projects</h3>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in">
-                    <img src="resource/img/project/myvote.png" alt="MyVote" class="w-full">
-                    <div class="p-4">
+                    <a href="https://github.com/Krigergeist/MyVote/">
+                        <img src="resource/img/project/myvote.png" alt="MyVote" class="w-full">
+                    </a>
+                        <div class="p-4">
                         <h4 class="font-bold text-lg mb-2">MyVote</h4>
                         <p class="text-sm text-gray-600 mb-3">A website build with laravel for make a voting easier
                         </p>
@@ -88,7 +126,9 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="resource/img/project/Pomodoro.png" alt="Pomodoro Timer App" class="w-full">
+                    <a href="https://github.com/Krigergeist/Podoromo_Timer_App">
+                        <img src="resource/img/project/Pomodoro.png" alt="Pomodoro Timer App" class="w-full">
+                    </a>
                     <div class="p-4">
                         <h4 class="font-bold text-lg mb-2">Pomodoro Timer App</h4>
                         <p class="text-sm text-gray-600 mb-3">A productivity tool built with JavaScript and Bootstrap.</p>
@@ -99,7 +139,9 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="resource/img/project/Task-Sceduler.png" alt="project3" class="w-full">
+                    <a href="https://github.com/Krigergeist/Task-Scheduler">
+                        <img src="resource/img/project/Task-Sceduler.png" alt="project3" class="w-full">
+                    </a>
                     <div class="p-4">
                         <h4 class="font-bold text-lg mb-2">Task Scheduler</h4>
                         <p class="text-sm text-gray-600 mb-3">Interactive task scheduling application that organizes your tasks efficiently.</p>
@@ -125,8 +167,48 @@
             </div>
         </div>
     </section>
+         
+    <section id="Certificate" class="py-20 bg-gray-100"> 
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Certificate</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in">
+                    <img src="resource/img/project/myvote.png" alt="MyVote" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">MyVote</h4>
+                        <p class="text-sm text-gray-600 mb-3">A website build with laravel for make a voting easier
+                        </p>
                     </div>
                 </div>
+        
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="resource/img/project/Pomodoro.png" alt="Pomodoro Timer App" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Pomodoro Timer App</h4>
+                        <p class="text-sm text-gray-600 mb-3">A productivity tool built with JavaScript and Bootstrap.</p>
+                        
+                    </div>
+                </div>
+        
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="resource/img/project/Task-Sceduler.png" alt="project3" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Task Scheduler</h4>
+                        <p class="text-sm text-gray-600 mb-3">Interactive task scheduling application that organizes your tasks
+                            efficiently.</p>
+                        
+                    </div>
+                </div>
+        
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="resource/img/project/Task-Sceduler.png" alt="project3" class="w-full">
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-2">Web Portofolio</h4>
+                        <p class="text-sm text-gray-600 mb-3">A web that showcase of my work and projects.</p>
+                        
+                    </div>
+                </div>
+        
             </div>
         </div>
     </section>
