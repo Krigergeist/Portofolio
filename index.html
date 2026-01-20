@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -56,7 +56,9 @@
       /* Border & hover untuk card */
       .card-custom {
         border: 1px solid #e5e7eb;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
       }
 
       .card-custom:hover {
@@ -104,6 +106,8 @@
           <li>
             <a
               href="https://github.com/Krigergeist/"
+              target="_blank"
+              rel="noopener noreferrer"
               class="hover:text-blue-600"
               >GitHub</a
             >
@@ -275,12 +279,106 @@
           Projects
         </h3>
         <div class="grid md:grid-cols-3 gap-8">
+          <!-- Project 5: Lediashier -->
+          <div
+            class="bg-white rounded-xl overflow-hidden card-custom"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
+            <a
+              href="https://github.com/Krigergeist/LEDIASHIER"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="resource/img/projects/Lediashier.png"
+                alt="Lediashier"
+                class="w-full"
+                loading="lazy"
+              />
+            </a>
+            <div class="p-4">
+              <div class="flex justify-between">
+                <h4 class="font-bold text-lg mb-2">Lediashier</h4>
+                <p class="">Nov 2025</p>
+              </div>
+
+              <p class="text-sm text-gray-600 mb-3">
+                A cashier website for sales tracking and management made with
+                <b>Laravel</b> combined with <b>Tailwind</b> and <b>React</b>.
+              </p>
+              <a
+                href="https://github.com/Krigergeist/LEDIASHIER"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 font-semibold hover:underline"
+                >View Repo</a
+              >
+              <!-- <span class="mx-2">|</span>
+              <a
+                href="https://krigergeist.github.io/Portofolio/"
+                class="text-blue-600 font-semibold hover:underline"
+                >Live Demo</a
+              > -->
+            </div>
+          </div>
+
+          <!-- Project 4: Portfolio Website -->
+          <div
+            class="bg-white rounded-xl overflow-hidden card-custom"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
+            <a
+              href="https://github.com/Krigergeist/Portofolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="resource/img/projects/Portofolio.png"
+                alt="Portfolio Website"
+                class="w-full"
+                loading="lazy"
+              />
+            </a>
+            <div class="p-4">
+              <div class="flex justify-between">
+                <h4 class="font-bold text-lg mb-2">Portfolio Website</h4>
+                <p>Sep 2025</p>
+              </div>
+              <p class="text-sm text-gray-600 mb-3">
+                A clean responsive portfolio built with <b>Tailwind</b>
+                .
+              </p>
+              <a
+                href="https://github.com/Krigergeist/Portofolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 font-semibold hover:underline"
+                >View Repo</a
+              >
+              <span class="mx-2">|</span>
+              <a
+                href="https://krigergeist.github.io/Portofolio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 font-semibold hover:underline"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+
           <!-- Project 1: MyVote -->
           <div
             class="bg-white rounded-xl overflow-hidden card-custom"
             data-aos="zoom-in"
           >
-            <a href="https://github.com/Krigergeist/MyVote/">
+            <a
+              href="https://github.com/Krigergeist/MyVote/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              >
               <img
                 src="resource/img/projects/myvote.png"
                 alt="MyVote"
@@ -289,49 +387,20 @@
               />
             </a>
             <div class="p-4">
-              <h4 class="font-bold text-lg mb-2">MyVote</h4>
+              <div class="flex justify-between">
+                <h4 class="font-bold text-lg mb-2">MyVote</h4>
+                <p>Aug 2025</p>
+              </div>
               <p class="text-sm text-gray-600 mb-3">
                 A voting platform built with <b>Laravel</b> for easy online
                 elections.
               </p>
               <a
                 href="https://github.com/Krigergeist/MyVote/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-600 font-semibold hover:underline"
                 >View Repo</a
-              >
-            </div>
-          </div>
-
-          <!-- Project 2: Pomodoro Timer App -->
-          <div
-            class="bg-white rounded-xl overflow-hidden card-custom"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <a href="https://github.com/Krigergeist/Podoromo_Timer_App">
-              <img
-                src="resource/img/projects/Pomodoro.png"
-                alt="Pomodoro Timer App"
-                class="w-full"
-                loading="lazy"
-              />
-            </a>
-            <div class="p-4">
-              <h4 class="font-bold text-lg mb-2">Pomodoro Timer App</h4>
-              <p class="text-sm text-gray-600 mb-3">
-                A productivity tool built with <b>JavaScript</b> and
-                <b>Bootstrap</b>.
-              </p>
-              <a
-                href="https://github.com/Krigergeist/Podoromo_Timer_App"
-                class="text-blue-600 font-semibold hover:underline"
-                >View Repo</a
-              >
-              <span class="mx-2">|</span>
-              <a
-                href="https://krigergeist.github.io/Podoromo_Timer_App/"
-                class="text-blue-600 font-semibold hover:underline"
-                >Live Demo</a
               >
             </div>
           </div>
@@ -342,7 +411,11 @@
             data-aos="zoom-in"
             data-aos-delay="400"
           >
-            <a href="https://github.com/Krigergeist/Task-Scheduler">
+            <a
+              href="https://github.com/Krigergeist/Task-Scheduler"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="resource/img/projects/Task-Sceduler.png"
                 alt="Task Scheduler"
@@ -351,90 +424,74 @@
               />
             </a>
             <div class="p-4">
-              <h4 class="font-bold text-lg mb-2">Task Scheduler</h4>
+              <div class="flex justify-between">
+                <h4 class="font-bold text-lg mb-2">Task Scheduler</h4>
+                <p>May 2025</p>
+              </div>
               <p class="text-sm text-gray-600 mb-3">
                 An interactive <b>JavaScript</b>-based task scheduling app for
                 better productivity.
               </p>
               <a
                 href="https://github.com/Krigergeist/Task-Scheduler"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-600 font-semibold hover:underline"
                 >View Repo</a
               >
               <span class="mx-2">|</span>
               <a
                 href="https://krigergeist.github.io/Task-Scheduler/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-600 font-semibold hover:underline"
                 >Live Demo</a
               >
             </div>
           </div>
 
-          <!-- Project 4: Portfolio Website -->
+          <!-- Project 2: Pomodoro Timer App -->
           <div
             class="bg-white rounded-xl overflow-hidden card-custom"
             data-aos="zoom-in"
-            data-aos-delay="600"
+            data-aos-delay="200"
           >
-            <a href="https://github.com/Krigergeist/Portofolio">
+            <a
+              href="https://github.com/Krigergeist/Podoromo_Timer_App"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
-                src="resource/img/projects/Portofolio.png"
-                alt="Portfolio Website"
+                src="resource/img/projects/Pomodoro.png"
+                alt="Pomodoro Timer App"
                 class="w-full"
                 loading="lazy"
               />
             </a>
             <div class="p-4">
-              <h4 class="font-bold text-lg mb-2">Portfolio Website</h4>
+              <div class="flex justify-between">
+                <h4 class="font-bold text-lg mb-2">Pomodoro Timer App</h4>
+                <p>May 2025</p>
+              </div>
               <p class="text-sm text-gray-600 mb-3">
-                A clean responsive portfolio built with <b>Tailwind</b>
-                .
+                A productivity tool built with <b>JavaScript</b> and
+                <b>Bootstrap</b>.
               </p>
               <a
-                href="https://github.com/Krigergeist/Portofolio"
+                href="https://github.com/Krigergeist/Podoromo_Timer_App"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-600 font-semibold hover:underline"
                 >View Repo</a
               >
               <span class="mx-2">|</span>
               <a
-                href="https://krigergeist.github.io/Portofolio/"
+                href="https://krigergeist.github.io/Podoromo_Timer_App/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-600 font-semibold hover:underline"
                 >Live Demo</a
               >
-            </div>
-          </div>
-
-          <!-- Project 5: Lediashier -->
-          <div
-            class="bg-white rounded-xl overflow-hidden card-custom"
-            data-aos="zoom-in"
-            data-aos-delay="600"
-          >
-            <a href="https://github.com/Krigergeist/LEDIASHIER">
-              <img
-                src="resource/img/projects/Lediashier.png"
-                alt="Lediashier"
-                class="w-full"
-                loading="lazy"
-              />
-            </a>
-            <div class="p-4">
-              <h4 class="font-bold text-lg mb-2">Lediashier</h4>
-              <p class="text-sm text-gray-600 mb-3">
-                A cashier website for sales tracking and management made with
-                <b>Laravel</b> combined with <b>Tailwind</b> and <b>React</b>.
-              </p>
-              <a
-                href="https://github.com/Krigergeist/Portofolio"
-                class="text-blue-600 font-semibold hover:underline"
-                >View Repo</a
-              >
-              <!-- <span class="mx-2">|</span>
-              <a
-                href="https://krigergeist.github.io/Portofolio/"
-                class="text-blue-600 font-semibold hover:underline"
-                >Live Demo</a
-              > -->
             </div>
           </div>
         </div>
@@ -453,7 +510,7 @@
             class="bg-white rounded-xl overflow-hidden card-custom"
             data-aos="zoom-in"
           >
-            <a href="resource/certificates/certificate1.pdf" target="_blank">
+            <a href="#certificates">
               <img
                 src="resource/img/certificates/kunjungan-industri.jpg"
                 alt="Certificate 1"
@@ -479,7 +536,7 @@
             data-aos="zoom-in"
             data-aos-delay="200"
           >
-            <a href="resource/certificates/certificate2.pdf" target="_blank">
+            <a href="#certificates">
               <img
                 src="resource/img/certificates/mpls.jpg"
                 alt="Certificate 2"
@@ -505,7 +562,7 @@
             data-aos="zoom-in"
             data-aos-delay="400"
           >
-            <a href="resource/certificates/certificate3.pdf" target="_blank">
+            <a href="#certificates">
               <img
                 src="resource/img/certificates/international-class.jpg"
                 alt="Certificate 3"
